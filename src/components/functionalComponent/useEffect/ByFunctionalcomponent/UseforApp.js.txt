@@ -1,0 +1,19 @@
+import { useState } from 'react';
+// import logo from './logo.svg';
+import './App.css';
+import Time from './components/functionalComponent/useEffect/ByFunctionalcomponent/TimeCount';
+export default function App(){ 
+    const [show,setShow] = useState(true);    
+    return (        
+        <div>
+<div>{show && <Time/>}</div>
+ <p>
+     <button type='button' onClick={()=> setShow((prevShow)=>!prevShow)}>
+        {show ? 'Hide Post ' : 'Show Post'}
+     </button>
+ </p>
+        </div>
+    ); 
+}
+
+ 

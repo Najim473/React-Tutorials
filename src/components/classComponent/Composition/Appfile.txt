@@ -1,0 +1,14 @@
+
+import Text from './components/Composition/Text'
+import Emoji from './components/Composition/Emoji'
+import Bracket from './components/Composition/Bracket'
+This line use in app return 
+<div className='composition'>       
+           <Emoji>
+             {({addEmoji} )=>(
+              <Bracket>
+              {({addBracket}) => <Text addEmoji={addEmoji} addBracket ={addBracket}/>}
+              </Bracket>
+             )}
+   
+           </Emoji> </div>

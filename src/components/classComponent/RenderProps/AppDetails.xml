@@ -1,0 +1,35 @@
+// import logo from './logo.svg';
+import './App.css'; 
+import ClickCounter from './components/RenderProps/ClickCounter'; 
+import HoverCounter from './components/RenderProps/HoverCounter';
+// import User from './components/RenderProps/User';
+import Counter from './components/RenderProps/Counter';
+function App() { 
+    return (          
+ <div className='flexBoard'>
+  <h1>Higher Order Components </h1>   
+  
+ <br/>
+{/* <User render = {(isLoggedIn)=>(isLoggedIn ? "Najim Uddin":"Guest")}/> */}
+{/* IN CASE OF THIS WE HAVE TO USE children  // we use <Counter> </Counter> this is render children*/} 
+<Counter>
+{(count,incrementCount)=> (<ClickCounter count={count}
+incrementCount={incrementCount}/>)}
+</Counter>
+<Counter>
+{(count,incrementCount)=> (<HoverCounter count={count}
+incrementCount={incrementCount}/>)}
+</Counter>
+{/* IN CASE OF THIS WE HAVE TO USE render  */}
+{/* <Counter 
+render = {(count,incrementCount)=> (<ClickCounter count={count}
+    incrementCount={incrementCount}/>)
+{/* <Counter 
+render = {(count,incrementCount)=> (<HoverCounter count={count}
+    incrementCount={incrementCount}/>)
+}/> */}
+ </div>     
+       );
+}
+
+export default App;
